@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_FcHbkNQFEeaqpuEbDEXjeA" name="Sk_ReliefWeb">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_Fhqp8NQFEeaqpuEbDEXjeA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_O2ZdUNQIEeaqpuEbDEXjeA" name="Use Case View">
+    <packagedElement xmi:type="uml:Package" xmi:id="_QopooNQJEeaqpuEbDEXjeA" name="Functional"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TNiAMNQJEeaqpuEbDEXjeA" name="Non functional">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_n5U50NQJEeaqpuEbDEXjeA">
+        <body>-json config file&#xD;
+-multi threading based on cores&#xD;
+</body>
+      </ownedComment>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_RuDm8NQIEeaqpuEbDEXjeA" name="Logical View">
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_HTdgEATLEeelC8KewnOqjg" name="Interaction1">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_LkAIMATLEeelC8KewnOqjg" name="Main" coveredBy="_dOxg0ATLEeelC8KewnOqjg _hwAQUATLEeelC8KewnOqjg _x8LkAATLEeelC8KewnOqjg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_UFkgoATLEeelC8KewnOqjg" name="http reliefweb" coveredBy="_kIwQYATLEeelC8KewnOqjg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_dOM5EATLEeelC8KewnOqjg" name="ReliefwebInterface" coveredBy="_dOyu8ATLEeelC8KewnOqjg _hwA3YATLEeelC8KewnOqjg _kIubMATLEeelC8KewnOqjg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_x7oKYATLEeelC8KewnOqjg" name="BatchFactory" coveredBy="_x8MLEATLEeelC8KewnOqjg _pFQxMATMEeelC8KewnOqjg _pFSmYATMEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dOxg0ATLEeelC8KewnOqjg" name="MessageSend" covered="_LkAIMATLEeelC8KewnOqjg" message="_dOtPYATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dOyu8ATLEeelC8KewnOqjg" name="MessageRecv" covered="_dOM5EATLEeelC8KewnOqjg" message="_dOtPYATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hwAQUATLEeelC8KewnOqjg" name="Message0Send" covered="_LkAIMATLEeelC8KewnOqjg" message="_hv_CMATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_hwA3YATLEeelC8KewnOqjg" name="Message0Recv" covered="_dOM5EATLEeelC8KewnOqjg" message="_hv_CMATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kIubMATLEeelC8KewnOqjg" name="Message0Send0" covered="_dOM5EATLEeelC8KewnOqjg" message="_kIr-8ATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kIwQYATLEeelC8KewnOqjg" name="Message0Recv0" covered="_UFkgoATLEeelC8KewnOqjg" message="_kIr-8ATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x8LkAATLEeelC8KewnOqjg" name="Message0Send1" covered="_LkAIMATLEeelC8KewnOqjg" message="_x8KV4ATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_x8MLEATLEeelC8KewnOqjg" name="Message0Recv1" covered="_x7oKYATLEeelC8KewnOqjg" message="_x8KV4ATLEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pFQxMATMEeelC8KewnOqjg" name="Message0Send2" covered="_x7oKYATLEeelC8KewnOqjg" message="_pFOU8ATMEeelC8KewnOqjg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_pFSmYATMEeelC8KewnOqjg" name="Message0Recv2" covered="_x7oKYATLEeelC8KewnOqjg" message="_pFOU8ATMEeelC8KewnOqjg"/>
+      <message xmi:type="uml:Message" xmi:id="_dOtPYATLEeelC8KewnOqjg" name="Message" messageSort="createMessage" receiveEvent="_dOyu8ATLEeelC8KewnOqjg" sendEvent="_dOxg0ATLEeelC8KewnOqjg"/>
+      <message xmi:type="uml:Message" xmi:id="_hv_CMATLEeelC8KewnOqjg" name="getTotalcount" receiveEvent="_hwA3YATLEeelC8KewnOqjg" sendEvent="_hwAQUATLEeelC8KewnOqjg"/>
+      <message xmi:type="uml:Message" xmi:id="_kIr-8ATLEeelC8KewnOqjg" name="jsonRequest" receiveEvent="_kIwQYATLEeelC8KewnOqjg" sendEvent="_kIubMATLEeelC8KewnOqjg"/>
+      <message xmi:type="uml:Message" xmi:id="_x8KV4ATLEeelC8KewnOqjg" name="create" messageSort="createMessage" receiveEvent="_x8MLEATLEeelC8KewnOqjg" sendEvent="_x8LkAATLEeelC8KewnOqjg">
+        <argument xmi:type="uml:LiteralInteger" xmi:id="_IIPWgATMEeelC8KewnOqjg" name="totalCount"/>
+        <argument xmi:type="uml:LiteralInteger" xmi:id="_LckOAATMEeelC8KewnOqjg" name="batchSize"/>
+      </message>
+      <message xmi:type="uml:Message" xmi:id="_pFOU8ATMEeelC8KewnOqjg" name="determineNrOfBatches" receiveEvent="_pFSmYATMEeelC8KewnOqjg" sendEvent="_pFQxMATMEeelC8KewnOqjg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_U4kbINQIEeaqpuEbDEXjeA" name="Process View"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_XQ-c8NQIEeaqpuEbDEXjeA" name="Implementation View"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_aYMFgNQIEeaqpuEbDEXjeA" name="Deployment View"/>
+</uml:Model>

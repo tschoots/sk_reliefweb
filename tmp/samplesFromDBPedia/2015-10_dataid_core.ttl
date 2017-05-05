@@ -1,0 +1,161 @@
+# This DataID document is part of the dataset metadata released alongside each DBpedia language edition.
+# This is the rocord for the Core Directory edition of DBpedia version 2015-10.
+# Please refer to http://dbpedia.org for general information on DBpedia and http://wiki.dbpedia.org/dbpedia-dataset-version-2015-10 for more information about this release.
+
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix spdx:  <http://spdx.org/rdf/terms#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dmp:   <http://dataid.dbpedia.org/ns/dmp#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sd:    <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dataid-mt: <http://dataid.dbpedia.org/ns/mt#> .
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dataid-ld: <http://dataid.dbpedia.org/ns/ld#> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl>
+        a                          dataid:DataId ;
+        dataid:associatedAgent     <http://wiki.dbpedia.org/dbpedia-association/persons/Freudenberg> , <http://wiki.dbpedia.org/dbpedia-association/persons/Kontokostas> , <http://wiki.dbpedia.org/dbpedia-association> ;
+        dataid:inCatalog           <http://downloads.dbpedia.org/2015-10/2015-10_dataid_catalog.ttl> ;
+        dataid:underAuthorization  <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=creatorAuthorization> , <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=contactAuthorization> , <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=maintainerAuthorization> ;
+        dc:conformsTo              <http://dataid.dbpedia.org/ns/ld> , <http://dataid.dbpedia.org/ns/core> ;
+        dc:hasVersion              <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?version=1.0.0> ;
+        dc:issued                  "2016-03-31"^^xsd:date ;
+        dc:modified                "2016-12-13"^^xsd:date ;
+        dc:publisher               <http://wiki.dbpedia.org/dbpedia-association> ;
+        dc:title                   "DataID metadata for the Core Directory DBpedia"@en ;
+        foaf:primaryTopic          <http://dbpedia.org/dataset/main_dataset?lang=core&dbpv=2015-10> .
+
+########### Agents & Authorizations ###########
+
+<http://www.researcherid.com/rid/L-2180-2016>
+        a                              dataid:Identifier ;
+        dataid:literal                 "L-2180-2016" ;
+        dc:issued                      "2016-08-01"^^xsd:date ;
+        dc:references                  <http://www.researcherid.com/rid/L-2180-2016> ;
+        datacite:usesIdentifierScheme  datacite:researcherid .
+
+<http://wiki.dbpedia.org/dbpedia-association/persons/Kontokostas>
+        a                        dataid:Agent ;
+        dataid:hasAuthorization  <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=contactAuthorization> ;
+        foaf:homepage            <http://aksw.org/DimitrisKontokostas.html> ;
+        foaf:mbox                "kontokostas@informatik.uni-leipzig.de" ;
+        foaf:name                "Dimitris Kontokostas" .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=creatorAuthorization>
+        a                          dataid:Authorization ;
+        dataid:authorityAgentRole  dataid:Creator ;
+        dataid:authorizedAgent     <http://wiki.dbpedia.org/dbpedia-association> ;
+        dataid:authorizedFor       <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl> ;
+        dataid:isInheritable       true .
+
+<http://wiki.dbpedia.org/dbpedia-association>
+        a                        dataid:Agent ;
+        dataid:hasAuthorization  <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=creatorAuthorization> ;
+        foaf:homepage            <http://dbpedia.org> ;
+        foaf:mbox                "dbpedia@infai.org" ;
+        foaf:name                "DBpedia Association" .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=maintainerAuthorization>
+        a                          dataid:Authorization ;
+        dataid:authorityAgentRole  dataid:Maintainer ;
+        dataid:authorizedAgent     <http://wiki.dbpedia.org/dbpedia-association/persons/Freudenberg> ;
+        dataid:authorizedFor       <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl> ;
+        dataid:isInheritable       true .
+
+<http://wiki.dbpedia.org/dbpedia-association/persons/Freudenberg>
+        a                        dataid:Agent ;
+        dataid:hasAuthorization  <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=maintainerAuthorization> ;
+        dataid:identifier        <http://www.researcherid.com/rid/L-2180-2016> ;
+        foaf:mbox                "freudenberg@informatik.uni-leipzig.de" ;
+        foaf:name                "Markus Freudenberg" .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?auth=contactAuthorization>
+        a                          dataid:Authorization ;
+        dataid:authorityAgentRole  dataid:Contact ;
+        dataid:authorizedAgent     <http://wiki.dbpedia.org/dbpedia-association/persons/Kontokostas> ;
+        dataid:authorizedFor       <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl> ;
+        dataid:isInheritable       true .
+
+########### Main Dataset ###########
+
+<http://dbpedia.org/dataset/main_dataset?lang=core&dbpv=2015-10>
+        a                           dataid:Dataset , dataid:Superset ;
+        rdfs:label                  "Main Dataset"@en ;
+        dataid:associatedAgent      <http://wiki.dbpedia.org/dbpedia-association> ;
+        dataid:growth               <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=growth> ;
+        dataid:latestVersion        <http://dbpedia.org/dataset/main_dataset?lang=core&dbpv=2016-04> ;
+        dataid:nextVersion          <http://dbpedia.org/dataset/main_dataset?lang=core&dbpv=2016-04> ;
+        dataid:openness             <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=openness> ;
+        dataid:reuseAndIntegration  <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=reuseAndIntegration> ;
+        dataid:similarData          <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=similarData> ;
+        dataid:usefulness           <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=usefulness> ;
+        dc:conformsTo               <http://dataid.dbpedia.org/ns/core> , <http://dataid.dbpedia.org/ns/ld> ;
+        dc:description              "DBpedia is a crowd-sourced community effort to extract structured information from Wikipedia and make this information available on the Web. DBpedia allows you to ask sophisticated queries against Wikipedia, and to link the different data sets on the Web to Wikipedia data. We hope that this work will make it easier for the huge amount of information in Wikipedia to be used in some new interesting ways. Furthermore, it might inspire new mechanisms for navigating, linking, and improving the encyclopedia itself."@en ;
+        dc:hasVersion               <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?version=1.0.0> ;
+        dc:issued                   "2016-03-31"^^xsd:date ;
+        dc:language                 <http://lexvo.org/id/iso639-3/eng> ;
+        dc:license                  <http://purl.oclc.org/NET/rdflicense/cc-by-sa3.0> ;
+        dc:modified                 "2016-12-13"^^xsd:date ;
+        dc:publisher                <http://wiki.dbpedia.org/dbpedia-association> ;
+        dc:rights                   <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?rights=dbpedia-rights> ;
+        dc:title                    "DBpedia root dataset for Core Directory, version 2015-10"@en ;
+        void:vocabulary             <http://downloads.dbpedia.org/2015-10/dbpedia_2015-10.nt> , <http://downloads.dbpedia.org/2015-10/dbpedia_2015-10.owl> ;
+        dcat:keyword                "Main Dataset"@en , "DBpedia"@en ;
+        dcat:landingPage            <http://dbpedia.org/> ;
+        foaf:isPrimaryTopicOf       <http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl> ;
+        foaf:page                   <http://wiki.dbpedia.org/dbpedia-dataset-version-2015-10> .
+
+########### Datasets & Distributions ###########
+
+########### Relations ###########
+
+########### Checksums ###########
+
+########### Statements ###########
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?version=1.0.0>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "1.0.0" .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=openness>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DBpedia is an open dataset, licensed under CC-BY-SA 3.0."@en .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=similarData>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "Similar data can be found in datasets like Freebase (https://freebase.com), Wikidata (https://www.wikidata.org), Yago (http://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago//) or OpenCyc (http://opencyc.org)."@en .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=growth>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DBpedia is an ongoing open-source project. Goal of the project is the extraction of the Wikipedia, as complete as possible. Currently, 126 languages are being extracted. In the future, DBpedia will try to increase its importance as the center of the LOD cloud by adding further external datasets"@en .
+
+<http://dataid.dbpedia.org/ns/core>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DataID - dataset metadata ontology"@en ;
+        dc:references     <http://dataid.dbpedia.org/ns/core> .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=usefulness>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DBpedia is a useful resource for interlinking general datasets with encyclopedic knowledge. Users profitting from DBpedia are open data developers, SMEs and researchers in data science and NLP"@en .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?stmt=reuseAndIntegration>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DBpedia data can be integrated into other datasets and reused for data enrichment or mashup purposes"@en .
+
+<http://downloads.dbpedia.org/2015-10/core/2015-10_dataid_core.ttl?rights=dbpedia-rights>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DBpedia is derived from Wikipedia and is distributed under the same licensing terms as Wikipedia itself. As Wikipedia has moved to dual-licensing, we also dual-license DBpedia starting with release 3.4. Data comprising DBpedia release 3.4 and subsequent releases is licensed under the terms of the Creative Commons Attribution-ShareAlike 3.0 license and the GNU Free Documentation License. Data comprising DBpedia releases up to and including release 3.3 is licensed only under the terms of the GNU Free Documentation License."@en .
+
+<http://dataid.dbpedia.org/ns/ld>
+        a                 dataid:SimpleStatement ;
+        dataid:statement  "DataID-LD - dataset metadata ontology with linked data extension"@en ;
+        dc:references     <http://dataid.dbpedia.org/ns/ld> .
+
+########### MediaTypes ###########
